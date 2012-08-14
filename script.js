@@ -40,7 +40,7 @@ var Resume = function(window, document) {
         nav.addEventListener('click', function(e) {
             e.preventDefault();
             if(e.target.tagName.toLowerCase() == 'a') {
-                dest = document.getElementById(e.target.getAttribute('href').substr(1)).offsetTop;
+                dest = document.getElementById(e.target.getAttribute('href').substring(1)).offsetTop;
                 hash = e.target.getAttribute('href');
                 clearTimeout(step);
                 scroll();
